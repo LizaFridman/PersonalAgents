@@ -45,7 +45,7 @@ A short official **"Game Changers"** list (separate from the banned list — the
 
 ## Banned list
 
-There is a single official banned list (not tiered by "banned as commander" vs. "banned as companion" — Wizards' Commander site treats it as one list) maintained at mtgcommander.net, currently on the order of 80+ cards. It changes via periodic announcements. **Always verify current status live** (mtgcommander.net's banned list page, or a Scryfall search like `q=banned:commander`) rather than relying on a memorized list here — this file intentionally does not enumerate it, since a stale copy is worse than an explicit live check.
+There is a single official banned list (not tiered by "banned as commander" vs. "banned as companion" — Wizards' Commander site treats it as one list) maintained at mtgcommander.net, currently on the order of 80+ cards. It changes via periodic announcements. **Always verify current status live** — either mtgcommander.net's banned list page, or a Scryfall site search (`https://scryfall.com/search?q=banned:commander`, per `project-instructions.md` — not the `api.scryfall.com` endpoint) — rather than relying on a memorized list here. This file intentionally does not enumerate it, since a stale copy is worse than an explicit live check.
 
 ## Common multiplayer rulings worth knowing
 

@@ -9,10 +9,10 @@ This is **Level 1** of a 3-level design (pure Project, no hosted infrastructure)
 ## How it fits together
 
 - **`project-instructions.md`** — paste into the Project's custom instructions. The orchestrator: defines the agent's persona and which file/data source to consult for which kind of question.
-- **`commander-rules-reference.md`** and **`deckbuilding-framework.md`** — upload as Project knowledge. Static reference content.
+- **`commander-rules-reference.md`**, **`deckbuilding-framework.md`**, and **`community-resources.md`** — upload as Project knowledge. Static reference content: rules, deck-building methodology, and where to pull community synergy data (EDHREC), combo checks (Commander Spellbook), and strategy articles from.
 - **`manabox-drive-workflow.md`** — how your ManaBox collection gets exported and kept current in Google Drive.
 - **`price-tracking-workflow.md`** — how the agent looks up and (on request) logs card values.
-- **`wiki-structure.md`** — the compounding-memory layer: how the agent accumulates deck progress and insights across sessions in Google Drive instead of starting fresh every chat, based on Karpathy's "LLM wiki" pattern (raw sources → agent-owned wiki → index/log).
+- **`wiki-structure.md`** — the compounding-memory layer: how the agent accumulates deck progress and insights across sessions in Google Drive instead of starting fresh every chat, based on Karpathy's "LLM wiki" pattern (raw sources → agent-owned wiki → index/log). Also defines `wiki/knowledge-gaps.md`, the closest thing to "self-updating" the agent can do given that Project Knowledge is read-only — it logs stale/missing curated knowledge there instead of silently working around it, for you to fold back into the repo later.
 - **`setup-guide.md`** — do this once, start to finish, including a verification checklist.
 
 ## Why this shape
