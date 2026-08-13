@@ -7,7 +7,7 @@ This defines the compounding-memory layer of the agent, based on the "LLM wiki" 
 ```
 MTG Commander Agent/
   raw/
-    manabox_collection.csv      (immutable — see manabox-drive-workflow.md)
+    manabox_Collection.csv      (immutable — see manabox-drive-workflow.md)
   wiki/
     index.md                    (catalog of every wiki page)
     log.md                      (append-only chronological journal)

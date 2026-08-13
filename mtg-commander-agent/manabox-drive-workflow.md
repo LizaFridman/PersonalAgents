@@ -13,7 +13,7 @@ ManaBox's documented CSV columns (used for both import and, per its own docs, ex
 ## Uploading to Drive
 
 1. In Google Drive, create (once) a folder named `MTG Commander Agent` at a location you'll remember, with a `raw` subfolder inside it (see `wiki-structure.md` for the full folder layout).
-2. Each time you export from ManaBox, upload the new CSV into `MTG Commander Agent/raw/` as **`manabox_collection.csv`**, replacing the previous file (don't accumulate dated copies here — this folder holds the *current* collection only; historical change tracking belongs in the wiki/log if it's ever worth recording, not in duplicate raw files).
+2. Each time you export from ManaBox, upload the new CSV into `MTG Commander Agent/raw/` as **`manabox_Collection.csv`**, replacing the previous file (don't accumulate dated copies here — this folder holds the *current* collection only; historical change tracking belongs in the wiki/log if it's ever worth recording, not in duplicate raw files).
 
 ## Refresh cadence
 
@@ -25,7 +25,7 @@ There's no harm in it being a few weeks stale for casual questions; just re-expo
 
 ## What the agent does with it
 
-Per `project-instructions.md`, `raw/manabox_collection.csv` is read-only ground truth for ownership questions. The agent should:
+Per `project-instructions.md`, `raw/manabox_Collection.csv` is read-only ground truth for ownership questions. The agent should:
 - Match cards primarily by name + set code (and Scryfall ID when present), since that's what uniquely identifies a specific printing.
 - Never write to this file. If it needs to record something derived from the collection (e.g. "this deck is 80% buildable from owned cards"), that goes in a `wiki/<topic>.md` page instead.
 - Tell you plainly if the file is missing, empty, or looks stale relative to what you're asking, rather than silently working from an outdated collection.

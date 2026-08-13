@@ -1,6 +1,6 @@
 # Price Tracking Workflow
 
-> Defines how the agent looks up and logs card values. Covers both owned cards (from `raw/manabox_collection.csv`) and unowned cards you're considering.
+> Defines how the agent looks up and logs card values. Covers both owned cards (from `raw/manabox_Collection.csv`) and unowned cards you're considering.
 
 ## On-demand lookups (no logging)
 

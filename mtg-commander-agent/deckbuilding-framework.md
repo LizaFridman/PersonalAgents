@@ -2,6 +2,8 @@
 
 > Upload this file as Project knowledge. It's a working structure for deck-building conversations, not a rules document (see `commander-rules-reference.md` for that). Use it to keep deck discussions consistent and to make card cuts/includes defensible rather than vibes-based.
 
+> Once a commander is chosen (Step 1), pull the EDHREC page for it (`https://edhrec.com/commanders/<slug>` — see `project-instructions.md`'s roles list) for real popularity/synergy signal before free-associating card ideas. Treat it as a starting pool to filter through this framework's questions, not a list to copy wholesale — EDHREC skews toward what's popular, not necessarily what fits this specific budget/collection/bracket.
+
 ## Step 1 — Anchor the deck before picking cards
 
 Before recommending cards, establish (and record in the deck's `wiki/<topic>.md` page — see `wiki-structure.md`):
@@ -29,7 +31,7 @@ These are starting ratios, not hard rules — a low-curve aggro deck runs fewer 
 1. **Does it advance the game plan?** If it's just "a good card" but doesn't fit the archetype, it's a cut candidate even if powerful — Commander rewards coherence.
 2. **Does it do too little on its own?** Cards that only work with 2+ other specific cards in play are combo pieces, not general inclusions — fine in small numbers, risky as the deck's backbone unless the deck *is* a combo deck.
 3. **What's the mana cost relative to impact?** In a 100-card singleton deck you rarely draw your best cards on curve — prioritize efficient, flexible cards over narrow high-ceiling ones unless the deck has enough tutors/draw to find them reliably.
-4. **Ownership and cost** — check the collection (`raw/manabox_collection.csv`) before recommending a purchase; if the player already owns a reasonable substitute, say so and note the tradeoff instead of defaulting to the "optimal" unowned card.
+4. **Ownership and cost** — check the collection (`raw/manabox_Collection.csv`) before recommending a purchase; if the player already owns a reasonable substitute, say so and note the tradeoff instead of defaulting to the "optimal" unowned card.
 
 ## Step 4 — Power-level calibration
 
