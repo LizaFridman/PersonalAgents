@@ -1,6 +1,6 @@
 # Wiki Structure
 
-This defines the compounding-memory layer of the agent, based on the "LLM wiki" pattern: raw sources are immutable; the wiki is a set of markdown pages the agent owns and updates over time; an index and a log keep the wiki navigable and auditable. All of it lives in the Google Drive folder `MTG Commander Agent/`, alongside `raw/` and `price_log.csv` (see `manabox-drive-workflow.md` and `price-tracking-workflow.md`).
+This defines the compounding-memory layer of the agent, based on the "LLM wiki" pattern: raw sources are immutable; the wiki is a set of markdown pages the agent owns and updates over time; an index and a log keep the wiki navigable and auditable. All of it lives in the Google Drive folder `MTG Commander Agent/`, alongside `raw/`, `price_log.csv`, and `games_log.csv` (see `manabox-drive-workflow.md`, `price-tracking-workflow.md`, and `game-log-workflow.md`).
 
 ## Layout
 
@@ -12,8 +12,9 @@ MTG Commander Agent/
     index.md                    (catalog of every wiki page)
     log.md                      (append-only chronological journal)
     knowledge-gaps.md           (append-only backlog of stale/missing curated knowledge)
-    <topic>.md                  (one file per deck / evaluation / insight)
+    <topic>.md                  (one file per deck / evaluation / insight; deck pages carry a Stats section — see game-log-workflow.md)
   price_log.csv                 (structured — see price-tracking-workflow.md)
+  games_log.csv                 (structured — see game-log-workflow.md)
 ```
 
 ## `wiki/index.md`
@@ -64,6 +65,8 @@ Trigger this whenever a live lookup (Scryfall, EDHREC, Commander Spellbook, or g
 ## `wiki/<topic>.md` pages
 
 Created on demand, not from a fixed template — but each should generally cover: what it is, current state (e.g. a decklist, or a conclusion), why it's the way it is, and open questions. Keep one topic per file (a deck, a specific card evaluation, a standing insight about the collection) rather than merging unrelated topics — this keeps pages independently readable and citable from `index.md`.
+
+**Deck pages additionally carry a `## Stats` section** (record, win rate, breakdown by pod size, notable matchup patterns) once at least one game has been logged for that deck — see `game-log-workflow.md` for the exact format and refresh discipline. This is a standing summary refreshed incrementally as games are logged, not something recomputed from `games_log.csv` on every read.
 
 ## Maintenance rules
 

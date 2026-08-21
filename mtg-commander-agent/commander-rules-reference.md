@@ -47,9 +47,22 @@ A short official **"Game Changers"** list (separate from the banned list — the
 
 There is a single official banned list (not tiered by "banned as commander" vs. "banned as companion" — Wizards' Commander site treats it as one list) maintained at mtgcommander.net, currently on the order of 80+ cards. It changes via periodic announcements. **Always verify current status live** — either mtgcommander.net's banned list page, or a Scryfall site search (`https://scryfall.com/search?q=banned:commander`, per `project-instructions.md` — not the `api.scryfall.com` endpoint) — rather than relying on a memorized list here. This file intentionally does not enumerate it, since a stale copy is worse than an explicit live check.
 
+**For this player's actual games**, `house-rules.md` takes precedence over this official list — their playgroup may ban additional cards. Check it first; this section (and the live official-list lookup above) is the fallback for general Commander legality questions, not their table specifically.
+
 ## Common multiplayer rulings worth knowing
 
 - **"Choose an opponent" / "target opponent"** effects: in multiplayer, you choose among all opponents, not just one designated rival, unless the card restricts it.
 - **Deathtouch + trample**: only 1 damage needs to be assigned to a blocker for the rest to trample through, when combined.
 - **State-based actions** (life ≤ 0, commander damage ≥ 21, a creature with lethal damage marked, etc.) are checked continuously and simultaneously — a player can lose to commander damage even if an effect would otherwise have saved them via a life-total-based rule.
 - **Priority passes** all the way around the table before a spell/ability resolves — any player can respond, not just the one being targeted.
+
+## Common judge calls
+
+For when the player asks you to settle a live in-game dispute, not just explain a rule in the abstract:
+
+- **Missed triggers**: a "may" trigger you forget isn't lost — you can still choose to apply it once it's noticed, as long as no other decision has been made based on it having *not* happened. A mandatory trigger that's missed is generally handled by backing up as little as possible to fix it if it's caught quickly; if the game has moved on significantly, most casual tables just let it go rather than unwinding several turns — this is a table-etiquette call as much as a rules one.
+- **Stack order and responses**: the most recently added ability/spell resolves first (LIFO). Any player, in turn order starting from whoever has priority, can respond to anything on the stack — including responding to their own spell/ability before it resolves.
+- **"I didn't know that card did that"**: information about a card's actual printed rules text is public — a player can always ask to re-read a card, and outcomes aren't reversed just because a player misjudged a legal play's consequences (as opposed to a genuine misplay caused by wrong information someone gave them, e.g. a misread rules text — that's a better candidate for backing up).
+- **Simultaneous triggers, same player**: that player chooses the order. **Simultaneous triggers, different players**: active player's triggers go on the stack first, then in turn order — meaning they actually resolve *last* (stack is LIFO), so the active player's trigger resolves after everyone else's simultaneous triggers.
+
+These are the calls that come up often enough to be worth a quick reference; for anything with real money/format-legality stakes or a genuinely novel interaction, cross-check the actual oracle text and rulings live (per `project-instructions.md`'s judge-mode order: house rules → this file → live Scryfall lookup) rather than extrapolating from these examples.

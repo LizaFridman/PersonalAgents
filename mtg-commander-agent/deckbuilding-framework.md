@@ -51,3 +51,18 @@ Tie recommendations back to the target bracket:
 - Are there redundant effects for the deck's most important effect (e.g. multiple sac outlets in an aristocrats deck), so one removed piece doesn't blank the plan?
 - Does the deck have a plan against removal-heavy or counterspell-heavy tables, or is it fully reliant on one resolving spell?
 - Is there a way to interact with what opponents are doing, or is this a fully solitaire deck (fine for casual, risky at higher brackets)?
+
+## Table politics & play strategy
+
+Commander is multiplayer and social by design (`commander-rules-reference.md`) — a deck's *deck-building* strengths and its *political* exposure aren't the same thing, and both matter for "how good is this deck" beyond raw power level.
+
+- **Threat assessment**: the table generally targets whoever looks closest to winning or hardest to interact with, not whoever is "strongest" on paper. A deck that telegraphs its win early (a big flashy commander, an obvious combo piece in play) draws removal a low-key deck doesn't — factor this into card evaluation, not just power.
+- **Deal-making**: temporary alliances ("don't attack me this turn, I'll not counter your next spell") are normal play, not a house rule — but they're non-binding; advise honoring the spirit of a deal you made unless the game state changed enough to justify breaking it, since a table that stops trusting a player's word changes how everyone plays against them going forward, across games.
+- **Kingmaker/spite plays**: when a player is eliminated or clearly can't win, how they spend their last actions (helping decide who *does* win) is a real political lever, not just "well they're out anyway" — worth factoring into how a deck plays if it tends to make enemies along the way.
+- **Archetype-specific exposure**:
+  - *Group hug / politics* decks buy goodwill but can accidentally accelerate an opponent to a win — pair with some way to close out the game or interact late, not just generosity.
+  - *Stax / resource denial* decks draw disproportionate table heat — worth discussing with the player up front whether that's an accepted deck for their table (see `house-rules.md` for their group's power-level agreement) rather than discovering it mid-game.
+  - *Voltron* (single-creature beatdown) is an obvious, concentrated threat — protection density matters as much as raw power, since the whole plan dies to one removal spell resolving.
+  - *Combo* decks read as either "impressive" or "unfun" depending on the table's stated bracket/expectations — calibrate against the target bracket from Step 1, not just whether the combo is legal.
+
+For deeper reading beyond this framework-level summary, live-fetch Commander's Herald's politics/table-dynamics content per `community-resources.md` rather than expecting this file to cover it exhaustively.

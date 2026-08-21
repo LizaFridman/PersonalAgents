@@ -20,8 +20,10 @@ One-time setup to turn this file package into a working Claude.ai Project, plus 
    - `commander-rules-reference.md`
    - `deckbuilding-framework.md`
    - `community-resources.md`
-2. Don't upload the workflow docs (`manabox-drive-workflow.md`, `price-tracking-workflow.md`, `wiki-structure.md`) or `README.md` here — those are for you/future-you to maintain this package, not for Claude to consult mid-conversation. (Optional: upload them too if you want the agent able to explain its own setup on request — harmless either way, just not required.)
-3. Because these are static uploads, re-upload (replacing the old file) whenever you edit any of the three in the repo — there's no sync to forget about, but also no auto-update. (This is also where `wiki/knowledge-gaps.md` entries eventually feed back in — see `wiki-structure.md`.)
+   - `house-rules.md` — fill in your playgroup's actual custom ban list and house rules first (see that file); uploading it empty is fine too, just less useful until you do.
+   - `game-log-workflow.md`
+2. Don't upload the workflow docs (`manabox-drive-workflow.md`, `price-tracking-workflow.md`, `wiki-structure.md`, `maintenance-workflow.md`) or `README.md` here — those are for you/future-you to maintain this package, not for Claude to consult mid-conversation. (Optional: upload them too if you want the agent able to explain its own setup on request — harmless either way, just not required.)
+3. Because these are static uploads, re-upload (replacing the old file) whenever you edit any of the five in the repo — there's no sync to forget about, but also no auto-update. (This is also where `wiki/knowledge-gaps.md` entries eventually feed back in — see `wiki-structure.md` and `maintenance-workflow.md`.)
 
 ### Alternative once the GitHub connector bug is fixed
 
@@ -29,7 +31,7 @@ Instead of manual upload, you can connect the `PersonalAgents` repo itself so th
 
 1. Push this repo to GitHub if it isn't already (public or private both work — a private repo just needs you to grant the Claude GitHub App access to it during connector setup).
 2. In the Project's **Knowledge** section, click **+ → GitHub**, authenticate if prompted, and select the `PersonalAgents` repository.
-3. Use the file browser to select only `mtg-commander-agent/commander-rules-reference.md`, `mtg-commander-agent/deckbuilding-framework.md`, and `mtg-commander-agent/community-resources.md` (not the whole repo).
+3. Use the file browser to select only `mtg-commander-agent/commander-rules-reference.md`, `mtg-commander-agent/deckbuilding-framework.md`, `mtg-commander-agent/community-resources.md`, `mtg-commander-agent/house-rules.md`, and `mtg-commander-agent/game-log-workflow.md` (not the whole repo).
 4. **Not live sync**: after editing either file in the repo, the Project keeps using the old version until you click **Sync now** in the Project's Knowledge section — there's no sync control in the iPhone app, so do this from web/desktop before a mobile session where the update matters.
 
 ## 4. Enable Web Search
@@ -50,6 +52,7 @@ MTG Commander Agent/
     log.md                      ← starter content below
     knowledge-gaps.md           ← starter content below
   price_log.csv                 ← header row from price-tracking-workflow.md
+  games_log.csv                 ← header row from game-log-workflow.md
 ```
 
 3. Starter `wiki/index.md`:
@@ -75,7 +78,11 @@ MTG Commander Agent/
    ```csv
    date,card_name,set_code,finish,quantity_owned,unit_price_usd,total_value_usd,source
    ```
-7. Make sure the Drive integration/connector has access to this folder (some connector setups scope to "all Drive" and some ask you to pick folders — grant access to at least this one).
+7. Starter `games_log.csv`:
+   ```csv
+   date,deck,commander,pod_size,opponents_commanders,result,notes
+   ```
+8. Make sure the Drive integration/connector has access to this folder (some connector setups scope to "all Drive" and some ask you to pick folders — grant access to at least this one).
 
 ## 6. First ManaBox export
 
@@ -96,6 +103,8 @@ Run these from the iPhone app once setup is done:
 3. Ask "what do I own that could go in a [strategy] deck?" — should read `raw/manabox_Collection.csv`.
 4. Start a deck-building conversation, then in a later session ask about the same deck — should find/update its `wiki/<topic>.md` page instead of starting over.
 5. Ask it to log current prices for a few cards — should append a correct row to `price_log.csv`.
+6. Log a game result for a deck (e.g. "log a game: [deck], won, 4-player"), then ask "what's my win rate with [deck]?" — should append a row to `games_log.csv` and answer from that deck's `wiki/<topic>.md` Stats section.
+7. If you've filled in `house-rules.md`, ask about a card you banned there — should say it's banned per your house rules, not just check the official list.
 
 If any of these fail, the likely culprit is a missing connector permission (step 5), the GitHub connector not synced to the latest commit (step 3), or a knowledge file that wasn't selected — check the Project's Knowledge and Connectors sections first.
 
