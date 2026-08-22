@@ -16,6 +16,7 @@ This is **Level 1** of a 3-level design (pure Project, no hosted infrastructure)
 - **`price-tracking-workflow.md`** — how the agent looks up and (on request) logs card values.
 - **`wiki-structure.md`** — the compounding-memory layer: how the agent accumulates deck progress and insights (including each deck's win-rate Stats section) across sessions in Google Drive instead of starting fresh every chat, based on Karpathy's "LLM wiki" pattern (raw sources → agent-owned wiki → index/log). Also defines `wiki/knowledge-gaps.md`, the closest thing to "self-updating" the agent can do given that Project Knowledge is read-only — it logs stale/missing curated knowledge there instead of silently working around it, for you to fold back into the repo later.
 - **`maintenance-workflow.md`** — for you (or a future Claude Code session), not for Project upload: how to keep this package token-lean and reconcile `wiki/knowledge-gaps.md` back into the curated docs over time.
+- **`scheduled-tasks.md`** — for you, not for Project upload: how to configure Claude Projects' recurring-task scheduler, including a ready-to-paste weekly price/EDHREC refresh prompt for in-progress decks.
 - **`setup-guide.md`** — do this once, start to finish, including a verification checklist.
 
 ## Why this shape

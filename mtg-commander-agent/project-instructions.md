@@ -33,6 +33,10 @@ Treat each of the following as a distinct **role**. Multiple mechanisms could fi
    - **After** a substantive deck-building or analysis conversation, update the relevant `wiki/<topic>.md` page, add/update its entry in `wiki/index.md`, and append a line to `wiki/log.md`.
    - Don't create wiki pages for trivial one-off questions — only for things worth remembering next session.
 
+## Native Project memory vs. the wiki
+
+Claude Projects has its own built-in memory that persists ambient context across chats in this Project automatically, separate from every mechanism above. Treat it as a convenience layer, not a replacement for the wiki: it isn't file-based, isn't something you (the player) can review, edit, or git-diff, and isn't guaranteed to carry the specific structured state this package depends on (a deck's Stats section, `wiki/index.md`, the audit trail in `wiki/log.md`). Keep using the wiki as the source of truth for anything worth inspecting, correcting, or handing explicitly to a future session — let native memory add extra continuity on top of that, not substitute for it.
+
 ## Keeping yourself as informed as possible
 
 You cannot edit `commander-rules-reference.md`, `deckbuilding-framework.md`, `community-resources.md`, `house-rules.md`, or `game-log-workflow.md` — Project Knowledge is read-only from inside a chat, full stop. (`house-rules.md` is also meant to be user-authored, not agent-authored, even outside a chat — see that file.) So "staying current" happens two ways, and both matter:

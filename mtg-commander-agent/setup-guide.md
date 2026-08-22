@@ -12,27 +12,25 @@ One-time setup to turn this file package into a working Claude.ai Project, plus 
 1. Open the Project's settings and find **Instructions** (sometimes called "custom instructions" or "how should Claude approach this project").
 2. Paste the entire contents of `project-instructions.md` in as-is.
 
-## 3. Upload knowledge files
+## 3. Add knowledge files (GitHub connector)
 
-> **Known bug — GitHub connector currently broken for personal plans:** completing Settings → Connectors → GitHub on an individual Pro account (not Team/Enterprise) redirects to a "you don't have access to organization settings" error and the connection never finishes. This is a reported, reproduced Anthropic-side bug, not a misconfiguration — see [anthropics/claude-code #78761](https://github.com/anthropics/claude-code/issues/78761). Use manual upload below until it's fixed; the steps for connecting via GitHub instead are kept underneath in case you want to retry later.
-
-1. In the Project's **Knowledge** section, upload:
-   - `commander-rules-reference.md`
-   - `deckbuilding-framework.md`
-   - `community-resources.md`
-   - `house-rules.md` — fill in your playgroup's actual custom ban list and house rules first (see that file); uploading it empty is fine too, just less useful until you do.
-   - `game-log-workflow.md`
-2. Don't upload the workflow docs (`manabox-drive-workflow.md`, `price-tracking-workflow.md`, `wiki-structure.md`, `maintenance-workflow.md`) or `README.md` here — those are for you/future-you to maintain this package, not for Claude to consult mid-conversation. (Optional: upload them too if you want the agent able to explain its own setup on request — harmless either way, just not required.)
-3. Because these are static uploads, re-upload (replacing the old file) whenever you edit any of the five in the repo — there's no sync to forget about, but also no auto-update. (This is also where `wiki/knowledge-gaps.md` entries eventually feed back in — see `wiki-structure.md` and `maintenance-workflow.md`.)
-
-### Alternative once the GitHub connector bug is fixed
-
-Instead of manual upload, you can connect the `PersonalAgents` repo itself so the Project's knowledge stays tied to the source files:
+The GitHub connector is the primary path: connect the `PersonalAgents` repo itself so the Project's knowledge stays tied to the source files instead of static copies you have to remember to refresh.
 
 1. Push this repo to GitHub if it isn't already (public or private both work — a private repo just needs you to grant the Claude GitHub App access to it during connector setup).
 2. In the Project's **Knowledge** section, click **+ → GitHub**, authenticate if prompted, and select the `PersonalAgents` repository.
-3. Use the file browser to select only `mtg-commander-agent/commander-rules-reference.md`, `mtg-commander-agent/deckbuilding-framework.md`, `mtg-commander-agent/community-resources.md`, `mtg-commander-agent/house-rules.md`, and `mtg-commander-agent/game-log-workflow.md` (not the whole repo).
-4. **Not live sync**: after editing either file in the repo, the Project keeps using the old version until you click **Sync now** in the Project's Knowledge section — there's no sync control in the iPhone app, so do this from web/desktop before a mobile session where the update matters.
+3. Use the file browser to select only:
+   - `mtg-commander-agent/commander-rules-reference.md`
+   - `mtg-commander-agent/deckbuilding-framework.md`
+   - `mtg-commander-agent/community-resources.md`
+   - `mtg-commander-agent/house-rules.md` — fill in your playgroup's actual custom ban list and house rules first (see that file); an empty placeholder is fine too, just less useful until you do.
+   - `mtg-commander-agent/game-log-workflow.md`
+
+   Don't select the whole repo, and don't select the workflow docs (`manabox-drive-workflow.md`, `price-tracking-workflow.md`, `wiki-structure.md`, `maintenance-workflow.md`) or `README.md` — those are for you/future-you to maintain this package, not for Claude to consult mid-conversation. (Optional: select them too if you want the agent able to explain its own setup on request — harmless either way, just not required.)
+4. **Not live sync**: after editing a file in the repo, the Project keeps using the old version until you click **Sync now** in the Project's Knowledge section — there's no sync control in the iPhone app, so do this from web/desktop before a mobile session where the update matters. (This is also where `wiki/knowledge-gaps.md` entries eventually feed back in — see `wiki-structure.md` and `maintenance-workflow.md`.)
+
+### Alternative: manual upload
+
+If the GitHub connector isn't available on your account (there's a reported bug blocking it on some individual Pro accounts — see [anthropics/claude-code #78761](https://github.com/anthropics/claude-code/issues/78761) — though it may not affect yours), upload the same five files directly in the Project's **Knowledge** section instead. Static uploads have no sync: re-upload (replacing the old file) whenever you edit any of the five in the repo.
 
 ## 4. Enable Web Search
 
@@ -107,6 +105,10 @@ Run these from the iPhone app once setup is done:
 7. If you've filled in `house-rules.md`, ask about a card you banned there — should say it's banned per your house rules, not just check the official list.
 
 If any of these fail, the likely culprit is a missing connector permission (step 5), the GitHub connector not synced to the latest commit (step 3), or a knowledge file that wasn't selected — check the Project's Knowledge and Connectors sections first.
+
+## Optional: recurring automation
+
+Claude Projects supports its own task scheduler, separate from everything above. `scheduled-tasks.md` has a ready-to-paste weekly prompt that refreshes prices and EDHREC synergy data for decks you've flagged "In progress" in `wiki/index.md` — set it up there if you want it; nothing above depends on it.
 
 ## If you outgrow this
 

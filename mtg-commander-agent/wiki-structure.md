@@ -25,6 +25,8 @@ A flat catalog, one entry per wiki page, newest-relevant first. Each entry is a 
 # Wiki Index
 
 - **mono-black-aristocrats.md** — Sac-value Commander deck built around [Commander], budget ~$150. In progress: finalizing mana base.
+
+  (The exact phrase **"In progress"** matters beyond readability: it's also the marker the weekly scheduled refresh task uses to pick which decks to touch — see `scheduled-tasks.md`. Keep using it precisely while a deck is active, and drop it once a deck is finished/shelved.)
 - **selesnya-counters.md** — +1/+1 counters deck idea, shelved pending better payoffs.
 - **card-eval-smothering-tithe.md** — Notes on why Smothering Tithe was cut from the aristocrats build (doesn't fit the sac subtheme).
 ```
