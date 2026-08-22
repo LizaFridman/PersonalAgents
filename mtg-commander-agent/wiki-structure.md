@@ -12,6 +12,7 @@ MTG Commander Agent/
     index.md                    (catalog of every wiki page)
     log.md                      (append-only chronological journal)
     knowledge-gaps.md           (append-only backlog of stale/missing curated knowledge)
+    card-cache.md               (verified static card facts — not prices, not legality, not synergy)
     <topic>.md                  (one file per deck / evaluation / insight; deck pages carry a Stats section — see game-log-workflow.md)
   price_log.csv                 (structured — see price-tracking-workflow.md)
   games_log.csv                 (structured — see game-log-workflow.md)
@@ -63,6 +64,22 @@ Append-only, same discipline as `log.md`, but scoped specifically to gaps in the
 Trigger this whenever a live lookup (Scryfall, EDHREC, Commander Spellbook, or general web search) reveals something that contradicts or is missing from the curated docs — say so in the response, and log an entry here rather than letting the discrepancy pass silently.
 
 **Reconciling the backlog** (a periodic, user-initiated action — the agent can't do this part unattended): when asked to "review knowledge gaps" or similar, read `wiki/knowledge-gaps.md` and summarize what should change in which curated doc, specific enough that you (or a future Claude Code session working on the `mtg-commander-agent/` repo files) can fold it back in and re-upload/re-sync. Once reconciled, note it as resolved with a dated follow-up line rather than deleting the original entry — the log stays append-only.
+
+## `wiki/card-cache.md` — verified static card facts
+
+A single shared cache of card facts that don't change over time (or only change via erratum, not drift): color identity, mana cost, card type, oracle text. Written only after a live Scryfall verification in the current session — never from recollection — with the verification date recorded. A card listed here can be trusted without re-fetching; a card not listed must be looked up live. See `project-instructions.md`'s Role 4 for exactly when to check this before fetching, and when to write back to it after a live lookup.
+
+**Explicitly excluded — always fetch live, never cache:** prices, banned/legality status, and EDHREC synergy figures. These change over time independent of the card's printed text; caching them would go stale silently.
+
+Format: one `### Card Name` entry per card, grouped under a `## Verified <date>` heading, listing color identity/mana cost/type/oracle text and any notable caveat worth remembering (e.g., why a card was rejected from a build, if that came up during verification):
+
+```markdown
+## Verified 2026-08-14
+
+### Ragavan, Nimble Pilferer
+- Color identity: R | Cost: {R} | Type: Legendary Creature — Monkey Pirate
+- Dash {1}{R} (optional). On combat damage to a player: create a Treasure, exile their top card, may cast it until end of turn.
+```
 
 ## `wiki/<topic>.md` pages
 
