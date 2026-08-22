@@ -24,6 +24,8 @@ These are starting ratios, not hard rules — a low-curve aggro deck runs fewer 
 | Protection / interaction (counterspells, hexproof effects) | 3–6 | More at higher brackets. |
 | Synergy / payoff pieces | remainder | Everything that executes the actual game plan. |
 
+**When filling a quota slot, prefer a card that counts toward two or more of these categories at once over an equally-powered single-purpose card** — a removal spell that also proliferates, a creature that ramps and blocks, a draw spell with real commander-specific synergy on top, etc. A card that does double duty is a more efficient use of the one slot it occupies, which is itself a legitimate answer to Step 3's opportunity-cost question. Weight commander-specific synergy heavily in this comparison — a card that's merely generically good is worth less than one that's generically fine *and* meaningfully better because of what this specific commander/game plan does.
+
 ## Step 3 — Evaluate a candidate card against 5 questions
 
 A card needs to clear these together, not pass just one — fitting the deck's theme doesn't excuse a bad mana-cost-to-value trade-off, and raw power doesn't excuse not fitting the plan. See `community-resources.md`'s "Deckbuilding theory & card evaluation" section for sourced methodology behind questions 2 and 4.
