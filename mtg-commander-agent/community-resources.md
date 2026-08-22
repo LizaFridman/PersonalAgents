@@ -8,6 +8,15 @@
 
 Surfaces, per commander: high-synergy cards, top cards by category (creatures, removal, ramp, etc.), and community average decklists. This is the best available signal for "what does the community actually play with this commander" — pull it once a commander is chosen, before free-associating card ideas, and use it as a filtered starting pool rather than a list to copy wholesale (it skews toward what's popular, not necessarily what fits a specific budget/collection/bracket — apply `deckbuilding-framework.md`'s evaluation questions to anything pulled from it).
 
+## Deckbuilding theory & card evaluation (methodology, not meta)
+
+EDHREC and MTGGoldfish (above) tell you what the wider Commander population plays — a popularity/meta signal. They don't tell you *why* a specific card earns its slot in mana cost, trigger relevance, or opportunity cost against everything else that could fill that slot. For that judgment, prefer these methodology-focused sources over inferring it from inclusion rates alone:
+
+- **The Command Zone** (`commandzone.com`) — Commander-specific deckbuilding methodology, including a deckbuilding-ratio template (ramp/draw/disruption/etc., similar in spirit to `deckbuilding-framework.md`'s Step 2 quotas) and "Quadrant Theory" for evaluating a card's usefulness across different game states (ahead, behind, parity, topdeck mode) rather than just "is this card good."
+- **Star City Games — "How To Evaluate Magic Cards"** (`articles.starcitygames.com`) — the classic explicit statement of card evaluation as opportunity cost: every card in a deck competes against every other card that could occupy that slot, and "rate" (effect relative to mana cost) is the lens for comparing them.
+
+Use these for *how to think about* a candidate card, not for what's popular — cross-check any specific recommendation from either against the actual decklist and this player's house rules, same as any other source. See `deckbuilding-framework.md`'s Step 3 for how this applies directly to card selection.
+
 ## Commander Spellbook — combo detection
 
 `https://commanderspellbook.com/search/?q=<query>` — a community-maintained, 30,000+ entry database specifically of Commander/EDH card combos (not general card data). Fetch via Web Search/Fetch as a normal public page.

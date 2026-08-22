@@ -24,12 +24,19 @@ These are starting ratios, not hard rules — a low-curve aggro deck runs fewer 
 | Protection / interaction (counterspells, hexproof effects) | 3–6 | More at higher brackets. |
 | Synergy / payoff pieces | remainder | Everything that executes the actual game plan. |
 
-## Step 3 — Evaluate a candidate card against 4 questions
+## Step 3 — Evaluate a candidate card against 5 questions
 
-1. **Does it advance the game plan?** If it's just "a good card" but doesn't fit the archetype, it's a cut candidate even if powerful — Commander rewards coherence.
-2. **Does it do too little on its own?** Cards that only work with 2+ other specific cards in play are combo pieces, not general inclusions — fine in small numbers, risky as the deck's backbone unless the deck *is* a combo deck.
-3. **What's the mana cost relative to impact?** In a 100-card singleton deck you rarely draw your best cards on curve — prioritize efficient, flexible cards over narrow high-ceiling ones unless the deck has enough tutors/draw to find them reliably.
-4. **Ownership and cost** — check the collection (`raw/manabox_collection.csv`) before recommending a purchase; if the player already owns a reasonable substitute, say so and note the tradeoff instead of defaulting to the "optimal" unowned card.
+A card needs to clear these together, not pass just one — fitting the deck's theme doesn't excuse a bad mana-cost-to-value trade-off, and raw power doesn't excuse not fitting the plan. See `community-resources.md`'s "Deckbuilding theory & card evaluation" section for sourced methodology behind questions 2 and 4.
+
+1. **Does it advance the game plan?** If it's just "a good card" but doesn't fit the archetype, it's a cut candidate even if powerful — Commander rewards coherence. Fitting the theme is necessary, not sufficient — see 2.
+2. **Is it worth its mana cost on its own terms, in this deck?** Rate = effect delivered ÷ mana invested, judged against this deck's actual curve and speed. A card that complements the theme but underperforms its cost relative to what else is available at that cost is still a weak include — "on theme" doesn't waive this.
+3. **Does it do too little on its own?** Cards that only work with 2+ other specific cards in play are combo pieces, not general inclusions — fine in small numbers, risky as the deck's backbone unless the deck *is* a combo deck. Check any such combo against `house-rules.md`'s combo ban before relying on it at all.
+4. **What's the opportunity cost against the actual alternatives?** A slot given to this card is a slot not given to every other card that could fill it. Name at least one real alternative for the slot and state explicitly why this card wins the comparison (better rate, better curve fit, higher floor/ceiling for this deck specifically) — don't evaluate a card in isolation and call it done.
+5. **Ownership and cost** — check the collection (`raw/manabox_collection.csv`) before recommending a purchase; if the player already owns a reasonable substitute, say so and note the tradeoff instead of defaulting to the "optimal" unowned card.
+
+**On community synergy data specifically**: EDHREC's synergy scores come from the wider Commander population, which plays cards `house-rules.md` bans for this table (fast mana beyond Sol Ring, stax, infinite combos, free counterspells, and more). A high synergy score doesn't automatically transfer here — before recommending a card on synergy strength, check whether the reason behind that score depends on an interaction this pod doesn't allow, and discount it if so.
+
+**Document the answer, per card.** A finalized or updated decklist in the deck's `wiki/<topic>.md` page isn't a bare card-name list — each card carries a one-line justification (which of the above it wins on) and names what it actually synergizes with in this deck, not just "fits the theme." See `wiki-structure.md` for the exact format. This is what lets a later session reconsider a specific include/cut on real reasoning instead of re-deriving it from scratch.
 
 ## Step 4 — Power-level calibration
 

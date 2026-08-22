@@ -68,6 +68,16 @@ Trigger this whenever a live lookup (Scryfall, EDHREC, Commander Spellbook, or g
 
 Created on demand, not from a fixed template — but each should generally cover: what it is, current state (e.g. a decklist, or a conclusion), why it's the way it is, and open questions. Keep one topic per file (a deck, a specific card evaluation, a standing insight about the collection) rather than merging unrelated topics — this keeps pages independently readable and citable from `index.md`.
 
+**A deck page's decklist carries a per-card justification and synergy note, not a bare card-name list.** For each card: a one-line reason it's included (per `deckbuilding-framework.md`'s Step 3 evaluation questions) and what it actually synergizes with in this deck — name the specific card(s) or mechanism, not just "fits the theme." A table works well:
+
+```markdown
+| Card | Why included | Synergizes with |
+|---|---|---|
+| Blood Artist | Cheap, always-on drain on any creature death | Zulaport Cutthroat (redundant drain trigger), any sac outlet in the deck |
+```
+
+This is what lets a later session actually reconsider a specific include/cut with real reasoning, instead of re-deriving it from scratch or re-fetching the same evaluation.
+
 **Deck pages additionally carry a `## Stats` section** (record, win rate, breakdown by pod size, notable matchup patterns) once at least one game has been logged for that deck — see `game-log-workflow.md` for the exact format and refresh discipline. This is a standing summary refreshed incrementally as games are logged, not something recomputed from `games_log.csv` on every read.
 
 ## Maintenance rules
