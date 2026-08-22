@@ -17,7 +17,7 @@ These are starting ratios, not hard rules — a low-curve aggro deck runs fewer 
 
 | Category | Typical count | Notes |
 |---|---|---|
-| Lands | 36–38 | Lower with more ramp/cheap curve; a precon-level deck should stay near 38. |
+| Lands | 35 | Sweet spot for this player — 37+ is too many by default. Go a couple lower with heavy ramp/a very low curve; only go a couple higher for an unusually greedy, high-curve manabase. |
 | Ramp (mana rocks/dorks/ramp spells) | 8–12 | Include in the land-count trade-off above. |
 | Card draw / advantage | 8–12 | Recurring advantage engines count double toward "enough." |
 | Removal (spot + board wipes) | 8–10 | Split between targeted removal and 1–3 wraths depending on the meta. |
