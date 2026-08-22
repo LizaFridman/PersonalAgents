@@ -99,7 +99,7 @@ Follow `manabox-drive-workflow.md`: export your collection CSV from the ManaBox 
 Run these from the iPhone app once setup is done:
 
 1. Ask a rules question (e.g. "how much commander damage kills a player?") — should answer from `commander-rules-reference.md` without a web search.
-2. Ask about a recent card's legality/oracle text — should fetch it live from `api.scryfall.com`.
+2. Ask about a recent card's legality/oracle text — should fetch it live from Scryfall (`scryfall.com`).
 3. Ask "what do I own that could go in a [strategy] deck?" — should read `raw/manabox_Collection.csv`.
 4. Start a deck-building conversation, then in a later session ask about the same deck — should find/update its `wiki/<topic>.md` page instead of starting over.
 5. Ask it to log current prices for a few cards — should append a correct row to `price_log.csv`.

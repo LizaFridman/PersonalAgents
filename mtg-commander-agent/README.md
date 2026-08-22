@@ -20,7 +20,7 @@ This is **Level 1** of a 3-level design (pure Project, no hosted infrastructure)
 
 ## Why this shape
 
-Full Magic card data (30k+ cards) and the full comprehensive rules are both far too large to fit in a Claude Project's knowledge base, so card/rules lookups beyond the curated basics happen live against Scryfall's free public API instead of being embedded. ManaBox has no free official API, so collection sync is a manual CSV export/upload rather than a live integration. Both constraints are explained in more detail, with sources, in the plan this package was built from.
+Full Magic card data (30k+ cards) and the full comprehensive rules are both far too large to fit in a Claude Project's knowledge base, so card/rules lookups beyond the curated basics happen live against Scryfall's free public site instead of being embedded. ManaBox has no free official API, so collection sync is a manual CSV export/upload rather than a live integration. Both constraints are explained in more detail, with sources, in the plan this package was built from.
 
 Each doc has a single responsibility and the instructions reference *roles* ("authoritative card data", "the collection") rather than hardcoding specific mechanisms — so any one piece (e.g. swapping the Scryfall web-fetch role for a dedicated MCP connector later) can change without rewriting the rest.
 
