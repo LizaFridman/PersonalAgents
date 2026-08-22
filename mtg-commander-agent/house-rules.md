@@ -26,7 +26,8 @@
    - Capped at 9 poison counters max (corrupted threshold is 3).
    - Infect functions as Wither in combat, capped at 9 poison counters max.
 6. **Combos**
-   - No infinite loops or infinite combos allowed.
+   - No infinite loops or infinite combos may be **executed** in a game — this is a play-pattern restriction, not a deckbuilding exclusion. A card isn't cut from a deck just because it can combine with another specific card to form an infinite loop; both cards can be included as long as neither is individually on the Custom ban list below. The player simply doesn't chain the loop during an actual game — same trust-based norm as the deal-making guidance in `deckbuilding-framework.md`'s table-politics section.
+   - Only treat a combo as an actual reason to cut cards if the deck's real game plan *is* the loop (i.e., it's the deck's intended win condition, not an incidental interaction between two otherwise independently-justified inclusions). See `deckbuilding-framework.md`'s Step 3 for the standalone-value question that's the real test for whether a combo piece earns its slot.
 
 ## Custom ban list
 
