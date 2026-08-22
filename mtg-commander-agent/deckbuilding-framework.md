@@ -38,6 +38,16 @@ A card needs to clear these together, not pass just one — fitting the deck's t
 
 **Document the answer, per card.** A finalized or updated decklist in the deck's `wiki/<topic>.md` page isn't a bare card-name list — each card carries a one-line justification (which of the above it wins on) and names what it actually synergizes with in this deck, not just "fits the theme." See `wiki-structure.md` for the exact format. This is what lets a later session reconsider a specific include/cut on real reasoning instead of re-deriving it from scratch.
 
+## Common rejection patterns (catch these before finalizing)
+
+Recurring reasons a card gets cut in review — checking for these directly tends to catch problems faster than only running the Step 3 questions in the abstract:
+
+- **Narrow/meta-specific tech without a stated reason.** A card whose value depends on a specific opposing strategy (tribal hate, graveyard hate, artifact hate) is a weak default include — only run it if there's an actual reason tied to this pod's known tendencies, not "just in case."
+- **Weak effect in a category that has better options.** "It's removal/draw/ramp, the deck needs some" isn't sufficient on its own — compare it against the other real candidates in that category at similar cost (Step 3, question 4); a small or conditional effect loses to a cleaner one even if both technically qualify.
+- **Payoff type doesn't match the actual win condition.** A card that rewards combat damage/attacking is dead weight in a deck whose plan is sacrifice, drain, control, or an alt-wincon that doesn't route through connecting in combat — check the payoff's trigger against Step 1's stated game plan, not just its color or type.
+- **A fixed single-mode card loses to a flexible one at equal cost.** Between two cards at the same mana cost, one offering a choice of modes (e.g., ramp *or* draw *or* a body) is usually the better include over a fixed single-effect card, all else equal — flexibility adapts to whatever the game state actually needs.
+- **The deck's critical engine has no protection.** If the whole plan routes through one card (a single draw engine, the commander itself), size the protection suite (redirect effects, hexproof/ward, indestructible) to that dependency, not to a flat baseline — see the Synergy checklist below and Step 2's protection quota.
+
 ## Step 4 — Power-level calibration
 
 Tie recommendations back to the target bracket:
@@ -51,11 +61,12 @@ Tie recommendations back to the target bracket:
 - Color pip count across the deck (not just card count) is the better guide to how many sources of each color you need — a deck with double-pip commitments in one color needs more sources of that color than an even 3-color split.
 - Untapped, colorless-fixing lands (e.g. basics, fetches, duals) are worth more early; taplands are worth less in aggressive/low-curve decks.
 - Note when a mana base is aspirational (needs cards the player doesn't own) vs. buildable today from the collection.
+- If a specific color is starved despite an adequate pip-to-land ratio, prefer mana-fixing/doubling tools (in-color signets/talismans, filter lands, snow-typed basics paired with a snow payoff like Extraplanar Lens) over adding more lands of that color — there's limited room to fix a color problem by land count alone now that total lands are capped near 35 (Step 2).
 
 ## Synergy checklist (for evaluating a whole deck, not just one card)
 
 - Is there a clear A-to-B-to-win path, or is it a pile of good-but-disconnected cards?
-- Are there redundant effects for the deck's most important effect (e.g. multiple sac outlets in an aristocrats deck), so one removed piece doesn't blank the plan?
+- Are there redundant effects for the deck's most important effect (e.g. multiple sac outlets in an aristocrats deck), or direct protection for it (redirect effects, hexproof/ward, indestructible) when redundancy isn't practical for a genuinely unique engine piece — so one removed or countered piece doesn't blank the plan?
 - Does the deck have a plan against removal-heavy or counterspell-heavy tables, or is it fully reliant on one resolving spell?
 - Is there a way to interact with what opponents are doing, or is this a fully solitaire deck (fine for casual, risky at higher brackets)?
 
