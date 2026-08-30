@@ -85,7 +85,7 @@ Format: one `### Card Name` entry per card, grouped under a `## Verified <date>`
 
 Created on demand, not from a fixed template — but each should generally cover: what it is, current state (e.g. a decklist, or a conclusion), why it's the way it is, and open questions. Keep one topic per file (a deck, a specific card evaluation, a standing insight about the collection) rather than merging unrelated topics — this keeps pages independently readable and citable from `index.md`.
 
-**A deck page's decklist carries a per-card justification and synergy note, not a bare card-name list.** For each card: a one-line reason it's included (per `deckbuilding-framework.md`'s Step 3 evaluation questions) and what it actually synergizes with in this deck — name the specific card(s) or mechanism, not just "fits the theme." A table works well:
+**A deck page's decklist carries a per-card justification and synergy note, not a bare card-name list — this is mandatory, not a nice-to-have.** For each card, the "Why included" column states, concretely: what it does for the game plan, and whichever of mana-cost/value rate, opportunity cost against a real alternative for the slot, or ownership actually drove the pick (per `deckbuilding-framework.md`'s Step 3) — not a vague pointer like "fits the theme" or "good card." The "Synergizes with" column names the specific other card(s) or mechanism in *this* deck, not the archetype in the abstract. A table works well:
 
 ```markdown
 | Card | Why included | Synergizes with |
