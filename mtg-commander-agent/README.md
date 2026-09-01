@@ -9,7 +9,7 @@ This is **Level 1** of a 3-level design (pure Project, no hosted infrastructure)
 ## How it fits together
 
 - **`project-instructions.md`** — paste into the Project's custom instructions. The orchestrator: defines the agent's persona (including judge-mode framing for live rules disputes) and which file/data source to consult for which kind of question.
-- **`commander-rules-reference.md`**, **`deckbuilding-framework.md`** (now including a table politics & play strategy section), and **`community-resources.md`** — upload as Project knowledge. Static reference content: rules, deck-building methodology, and where to pull community synergy data (EDHREC), combo checks (Commander Spellbook), and strategy articles from.
+- **`commander-rules-reference.md`**, **`deckbuilding-framework.md`** (including a table politics & play strategy section), **`in-game-play.md`** (turn-by-turn tactical play — mulligans, sequencing, racing, playing ahead/behind, post-game loss diagnosis), and **`community-resources.md`** — upload as Project knowledge. Static reference content: rules, deck-building methodology, in-game tactics, and where to pull community synergy data (EDHREC), combo checks (Commander Spellbook), and strategy articles from.
 - **`house-rules.md`** — upload as Project knowledge. Your own playgroup's custom ban list and table rules; you author/edit this one, not the agent — see the file for why it takes precedence over the official rules for your actual games.
 - **`game-log-workflow.md`** — upload as Project knowledge. Defines how the agent logs game results and computes per-deck win-rate stats.
 - **`manabox-drive-workflow.md`** — how your ManaBox collection gets exported and kept current in Google Drive.

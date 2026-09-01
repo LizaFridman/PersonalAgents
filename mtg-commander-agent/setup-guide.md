@@ -21,6 +21,7 @@ The GitHub connector is the primary path: connect the `PersonalAgents` repo itse
 3. Use the file browser to select only:
    - `mtg-commander-agent/commander-rules-reference.md`
    - `mtg-commander-agent/deckbuilding-framework.md`
+   - `mtg-commander-agent/in-game-play.md`
    - `mtg-commander-agent/community-resources.md`
    - `mtg-commander-agent/house-rules.md` — fill in your playgroup's actual custom ban list and house rules first (see that file); an empty placeholder is fine too, just less useful until you do.
    - `mtg-commander-agent/game-log-workflow.md`
@@ -31,7 +32,7 @@ The GitHub connector is the primary path: connect the `PersonalAgents` repo itse
 
 ### Alternative: manual upload
 
-If the GitHub connector isn't available on your account (there's a reported bug blocking it on some individual Pro accounts — see [anthropics/claude-code #78761](https://github.com/anthropics/claude-code/issues/78761) — though it may not affect yours), upload the same six files directly in the Project's **Knowledge** section instead. Static uploads have no sync: re-upload (replacing the old file) whenever you edit any of the six in the repo.
+If the GitHub connector isn't available on your account (there's a reported bug blocking it on some individual Pro accounts — see [anthropics/claude-code #78761](https://github.com/anthropics/claude-code/issues/78761) — though it may not affect yours), upload the same seven files directly in the Project's **Knowledge** section instead. Static uploads have no sync: re-upload (replacing the old file) whenever you edit any of the seven in the repo.
 
 ## 4. Enable Web Search
 
@@ -119,6 +120,7 @@ Run these from the iPhone app once setup is done:
 7. If you've filled in `house-rules.md`, ask about a card you banned there — should say it's banned per your house rules, not just check the official list.
 8. Ask "what's [card] worth" for a card you haven't discussed yet, then ask to log its price — should complete without the agent saying it can't find the append mechanics (confirms `price-tracking-workflow.md` is actually in Knowledge, not just referenced by `game-log-workflow.md`).
 9. Ask about a card that's been in `wiki/card-cache.md` for a while and is central to what you're asking — should mention re-verifying it live rather than trusting the cached entry unconditionally once it's a few months old.
+10. Ask a mid-game tactical question (e.g. "I'm on the play with 2 lands, [commander], and a rock — keep or mulligan?") — should answer from `in-game-play.md`'s heuristics, not generic advice.
 
 If any of these fail, the likely culprit is a missing connector permission (step 5), the GitHub connector not synced to the latest commit (step 3), or a knowledge file that wasn't selected — check the Project's Knowledge and Connectors sections first.
 

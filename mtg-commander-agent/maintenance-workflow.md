@@ -4,7 +4,7 @@
 
 ## The token budget that matters here
 
-Project Knowledge files (`commander-rules-reference.md`, `deckbuilding-framework.md`, `community-resources.md`, `house-rules.md`, `game-log-workflow.md`) load **in full, every conversation**, on both web and mobile. Drive files (`raw/manabox_Collection.csv`, `price_log.csv`, `games_log.csv`, `wiki/*`) are fetched on demand instead. That asymmetry is the whole ops lever:
+Project Knowledge files (`commander-rules-reference.md`, `deckbuilding-framework.md`, `in-game-play.md`, `community-resources.md`, `house-rules.md`, `game-log-workflow.md`) load **in full, every conversation**, on both web and mobile. Drive files (`raw/manabox_Collection.csv`, `price_log.csv`, `games_log.csv`, `wiki/*`) are fetched on demand instead. That asymmetry is the whole ops lever:
 
 - When editing a Project Knowledge file, ask whether the addition earns its place in every single conversation, or whether it's better as a live-fetched role (already the pattern for card data, EDHREC, combos) or a wiki page (already the pattern for deck-specific accumulated knowledge).
 - A Project Knowledge file that's grown long is a bigger problem than a Drive file that's grown long — Drive files are read selectively (a deck's Stats section, a filtered `games_log.csv` query), Knowledge files aren't.

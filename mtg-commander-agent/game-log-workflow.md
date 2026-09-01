@@ -14,7 +14,7 @@ Ask for (or infer from what's given) whatever of the following wasn't stated —
 - `pod_size` — total players including the player, since win rate isn't comparable across pod sizes.
 - `opponents_commanders` — semicolon-separated list of opposing commanders/decks, as known; `unknown` is fine if not tracked that game.
 - `result` — `win`, `loss`, or `draw`.
-- `notes` — short free text: what happened, why it went that way. This is the qualitative record `wiki/<topic>.md` summaries draw on later — don't skip it just because the row would still be valid without it.
+- `notes` — short free text: what happened, why it went that way. This is the qualitative record `wiki/<topic>.md` summaries draw on later — don't skip it just because the row would still be valid without it. When the result is a loss, name the strategic cause where there is one (misassigned role, no inevitability, overcommitted into a known wrath, all-answers-no-plan, colour-screw despite an adequate pip ratio — see `in-game-play.md`), so deck pages accumulate diagnosable patterns rather than just a W/L record.
 
 ## `games_log.csv` schema
 
