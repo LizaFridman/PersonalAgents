@@ -117,6 +117,8 @@ Run these from the iPhone app once setup is done:
 5. Ask it to log current prices for a few cards — should append a correct row to `price_log.csv`.
 6. Log a game result for a deck (e.g. "log a game: [deck], won, 4-player"), then ask "what's my win rate with [deck]?" — should append a row to `games_log.csv` and answer from that deck's `wiki/<topic>.md` Stats section.
 7. If you've filled in `house-rules.md`, ask about a card you banned there — should say it's banned per your house rules, not just check the official list.
+8. Ask "what's [card] worth" for a card you haven't discussed yet, then ask to log its price — should complete without the agent saying it can't find the append mechanics (confirms `price-tracking-workflow.md` is actually in Knowledge, not just referenced by `game-log-workflow.md`).
+9. Ask about a card that's been in `wiki/card-cache.md` for a while and is central to what you're asking — should mention re-verifying it live rather than trusting the cached entry unconditionally once it's a few months old.
 
 If any of these fail, the likely culprit is a missing connector permission (step 5), the GitHub connector not synced to the latest commit (step 3), or a knowledge file that wasn't selected — check the Project's Knowledge and Connectors sections first.
 

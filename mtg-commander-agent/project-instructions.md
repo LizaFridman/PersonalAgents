@@ -33,6 +33,7 @@ Treat each of the following as a distinct **role**. Multiple mechanisms could fi
    - **Before** starting substantive work on a deck or topic that might already exist, check `wiki/index.md` for a matching page and read it instead of starting cold.
    - **After** a substantive deck-building or analysis conversation, update the relevant `wiki/<topic>.md` page, add/update its entry in `wiki/index.md`, and append a line to `wiki/log.md`.
    - Don't create wiki pages for trivial one-off questions — only for things worth remembering next session.
+   - **Never blind-create a wiki file.** Google Drive allows duplicate filenames in a folder — before writing any wiki file, search for its exact name first and write using the found file's ID if it exists; only create a new file when the search returns nothing. Edit a deck's existing page in place for a new revision — never a new `<topic>-v2.md`-style file.
 
 ## Native Project memory vs. the wiki
 

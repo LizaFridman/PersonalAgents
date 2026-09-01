@@ -35,10 +35,11 @@
 >    - Read all copies. If one copy's content is a clean superset of the others (contains everything the older ones do, plus more — e.g. an append-only file like `log.md` or `knowledge-gaps.md` that simply grew), keep the newest/most complete copy and move the rest to Drive Trash (not permanent delete).
 >    - If the copies have genuinely diverged — real content in one that's actually missing from the others, not just "older and shorter" — do NOT auto-resolve. Instead, log an entry in `wiki/knowledge-gaps.md` naming both file IDs and summarizing the difference, and leave all copies in place for the player to review.
 > 3. Cross-check `wiki/index.md` against the files actually present in `wiki/`: log a `knowledge-gaps.md` entry for any wiki file with no index entry, and any index entry pointing to a file that no longer exists.
-> 4. Append one `wiki/log.md` line summarizing this run — how many duplicate sets found, how many auto-resolved, how many flagged, how many index-drift issues found.
-> 5. If nothing is wrong, say so plainly and stop — don't manufacture busywork or touch files that don't need it.
+> 4. Check "In progress" tagging: for each deck page, read enough of it to tell whether it has real open work (flagged-not-forced items, an open question, no games logged yet, etc.). If a deck looks active but its `index.md` entry doesn't carry the literal "In progress" tag, log a `knowledge-gaps.md` entry naming it — the weekly EDHREC/price refresh task silently skips any deck missing that exact tag, so a miss here means that deck stops getting refreshed without anyone noticing.
+> 5. Append one `wiki/log.md` line summarizing this run — how many duplicate sets found, how many auto-resolved, how many flagged, how many index-drift or tagging issues found.
+> 6. If nothing is wrong, say so plainly and stop — don't manufacture busywork or touch files that don't need it.
 >
-> Finish with a one-line summary: duplicate sets found/cleaned/flagged, and index-drift issues found.
+> Finish with a one-line summary: duplicate sets found/cleaned/flagged, index-drift issues found, and any "In progress" tagging misses.
 
 **Why this is fine at weekly, even though the underlying problem doesn't need it:** the check itself is nearly free most weeks (a folder listing plus a filename comparison, ending immediately at step 5 if nothing's wrong) — the cost only shows up on a week a duplicate actually exists, which is exactly the week you want it caught. If duplicates turn out to appear almost every week, that's itself worth noticing (a sign the underlying write pattern needs a closer look), not just routine output.
 
