@@ -1,6 +1,8 @@
 # ManaBox → Google Drive Workflow
 
 > This defines how your ManaBox collection gets into the agent. There's no free official ManaBox API, so this is a manual export/upload step you repeat periodically — see `setup-guide.md` for the one-time setup and `project-instructions.md` / `wiki-structure.md` for how the agent treats this file (read-only ground truth, never edited by Claude).
+>
+> The collection answers "do I own this" and feeds buy lists. It is **not** a deckbuilding input — per `deckbuilding-framework.md` whether a card is owned never affects whether it goes in a deck.
 
 ## Exporting from ManaBox
 

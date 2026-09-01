@@ -1,6 +1,8 @@
 # Price Tracking Workflow
 
 > Defines how the agent looks up and logs card values. Covers both owned cards (from `raw/manabox_Collection.csv`) and unowned cards you're considering.
+>
+> Price is tracked for its own sake (collection value, trend questions, buy lists). It is **not** a deckbuilding input — per `deckbuilding-framework.md` a card's price never affects whether it goes in a deck.
 
 ## On-demand lookups (no logging)
 
