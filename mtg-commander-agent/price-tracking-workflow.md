@@ -4,7 +4,7 @@
 
 ## On-demand lookups (no logging)
 
-For "what's this worth" questions, fetch the card's Scryfall page (`https://scryfall.com/search?q=!"<name>"` for an exact match) per `project-instructions.md`'s card-data role — its JSON API (`api.scryfall.com`) is avoided here since it's been observed returning 403s to this agent's fetch tool. Read the price(s) shown on the page: `usd`, `usd_foil`, `eur`, `tix` (not every card has every finish). Report the relevant one(s) given the card's actual finish (check owned quantity/foil status from the collection CSV when the question is about an owned card). Don't log anything to `price_log.csv` unless asked to — on-demand lookups are ephemeral.
+For "what's this worth" questions, fetch the card's Scryfall page (`https://scryfall.com/search?q=!"<name>"` for an exact match) per `project-instructions.md`'s card-data role (Role 4) — see that role for the fetch mechanism and why the JSON API is avoided. Read the price(s) shown on the page: `usd`, `usd_foil`, `eur`, `tix` (not every card has every finish). Report the relevant one(s) given the card's actual finish (check owned quantity/foil status from the collection CSV when the question is about an owned card). Don't log anything to `price_log.csv` unless asked to — on-demand lookups are ephemeral.
 
 **Pacing**: these are individual page lookups, not a batch API (see `project-instructions.md`). That's not a practical constraint for a handful of cards in a chat, but for a large batch (e.g. "price my whole 100-card deck" or a big chunk of the collection):
 - Prefer summarizing (e.g. price the top 10–15 most valuable-looking cards by rarity/type rather than all 100) unless the player explicitly wants an exhaustive total.

@@ -24,13 +24,14 @@ The GitHub connector is the primary path: connect the `PersonalAgents` repo itse
    - `mtg-commander-agent/community-resources.md`
    - `mtg-commander-agent/house-rules.md` — fill in your playgroup's actual custom ban list and house rules first (see that file); an empty placeholder is fine too, just less useful until you do.
    - `mtg-commander-agent/game-log-workflow.md`
+   - `mtg-commander-agent/price-tracking-workflow.md` — `game-log-workflow.md` explicitly points to this file for its own append mechanics ("same read-modify-write pattern as `price_log.csv`"), so it needs to actually be readable mid-conversation, not just referenced.
 
-   Don't select the whole repo, and don't select the workflow docs (`manabox-drive-workflow.md`, `price-tracking-workflow.md`, `wiki-structure.md`, `maintenance-workflow.md`) or `README.md` — those are for you/future-you to maintain this package, not for Claude to consult mid-conversation. (Optional: select them too if you want the agent able to explain its own setup on request — harmless either way, just not required.)
+   Don't select the whole repo, and don't select the remaining workflow docs (`manabox-drive-workflow.md`, `wiki-structure.md`, `maintenance-workflow.md`) or `README.md` — those are for you/future-you to maintain this package, not for Claude to consult mid-conversation. (Optional: select them too if you want the agent able to explain its own setup on request — harmless either way, just not required.)
 4. **Not live sync**: after editing a file in the repo, the Project keeps using the old version until you click **Sync now** in the Project's Knowledge section — there's no sync control in the iPhone app, so do this from web/desktop before a mobile session where the update matters. (This is also where `wiki/knowledge-gaps.md` entries eventually feed back in — see `wiki-structure.md` and `maintenance-workflow.md`.)
 
 ### Alternative: manual upload
 
-If the GitHub connector isn't available on your account (there's a reported bug blocking it on some individual Pro accounts — see [anthropics/claude-code #78761](https://github.com/anthropics/claude-code/issues/78761) — though it may not affect yours), upload the same five files directly in the Project's **Knowledge** section instead. Static uploads have no sync: re-upload (replacing the old file) whenever you edit any of the five in the repo.
+If the GitHub connector isn't available on your account (there's a reported bug blocking it on some individual Pro accounts — see [anthropics/claude-code #78761](https://github.com/anthropics/claude-code/issues/78761) — though it may not affect yours), upload the same six files directly in the Project's **Knowledge** section instead. Static uploads have no sync: re-upload (replacing the old file) whenever you edit any of the six in the repo.
 
 ## 4. Enable Web Search
 
@@ -49,6 +50,7 @@ MTG Commander Agent/
     index.md                    ← starter content below
     log.md                      ← starter content below
     knowledge-gaps.md           ← starter content below
+    card-cache.md                ← starter content below
   price_log.csv                 ← header row from price-tracking-workflow.md
   games_log.csv                 ← header row from game-log-workflow.md
 ```
@@ -72,15 +74,27 @@ MTG Commander Agent/
 
    (empty — the agent logs stale/missing curated knowledge here; see wiki-structure.md)
    ```
-6. Starter `price_log.csv`:
+6. Starter `wiki/card-cache.md` (see `wiki-structure.md` for the full entry format — this starter carries one worked example so the format is self-documenting the first time the agent writes a real entry):
+   ```markdown
+   # Card Cache
+
+   Verified card facts only (color identity, mana cost, type, oracle text) — never prices, legality, or EDHREC synergy; those are always fetched live. Written only after a live verification in-session.
+
+   ## Verified 2026-08-13
+
+   ### Sol Ring
+   - Color identity: colorless | Cost: {1} | Type: Artifact
+   - {T}: Add {C}{C}.
+   ```
+7. Starter `price_log.csv`:
    ```csv
    date,card_name,set_code,finish,quantity_owned,unit_price_usd,total_value_usd,source
    ```
-7. Starter `games_log.csv`:
+8. Starter `games_log.csv`:
    ```csv
    date,deck,commander,pod_size,opponents_commanders,result,notes
    ```
-8. Make sure the Drive integration/connector has access to this folder (some connector setups scope to "all Drive" and some ask you to pick folders — grant access to at least this one).
+9. Make sure the Drive integration/connector has access to this folder (some connector setups scope to "all Drive" and some ask you to pick folders — grant access to at least this one).
 
 ## 6. First ManaBox export
 
