@@ -21,15 +21,15 @@
 
 **Why sampled prices, not exhaustive:** a full 100-card sweep per in-progress deck, every week, one Scryfall page fetch at a time, is exactly the workload `setup-guide.md`'s "If you outgrow this" section already flags as the reason to eventually build the batch-capable Level 3 system (`mtg-agent/`). Until that exists, sampling keeps this task fast and token-light; if it becomes a real pain point, that's a concrete signal to prioritize `mtg-agent` sub-project 1.
 
-## Monthly: wiki hygiene check (duplicate files + index drift)
+## Weekly: wiki hygiene check (duplicate files + index drift)
 
-**Cadence:** monthly.
+**Cadence:** weekly (Claude Projects' scheduler has a one-week minimum interval — can't be set to monthly even though the underlying problem doesn't need weekly attention). This is fine in practice: the check itself is cheap (list a Drive folder, compare filenames — the heavier read/compare work only runs if it actually finds a duplicate), and catching a duplicate within a week beats catching it within a month.
 
 **Why this exists:** Google Drive doesn't enforce unique filenames in a folder — unlike a normal filesystem, two files can share the exact same name. The read-modify-write pattern every write in this package uses (see `maintenance-workflow.md`'s "Known limitation: concurrent writes") has, in practice, occasionally created a new file instead of updating the existing one, leaving duplicate-named files sitting side by side with no automatic way to notice. This task is the periodic check for that, plus a check that `wiki/index.md` still matches what's actually in `wiki/`.
 
 **Task prompt** (paste as-is into the Project's scheduled task):
 
-> Run the monthly wiki hygiene check. This audits the wiki folder's own structural health, not any deck's content.
+> Run the weekly wiki hygiene check. This audits the wiki folder's own structural health, not any deck's content.
 > 1. List every file in `wiki/` via the Drive integration. Group by exact filename.
 > 2. For any filename with more than one file present, this is the known duplicate-write failure mode:
 >    - Read all copies. If one copy's content is a clean superset of the others (contains everything the older ones do, plus more — e.g. an append-only file like `log.md` or `knowledge-gaps.md` that simply grew), keep the newest/most complete copy and move the rest to Drive Trash (not permanent delete).
@@ -40,7 +40,7 @@
 >
 > Finish with a one-line summary: duplicate sets found/cleaned/flagged, and index-drift issues found.
 
-**Why monthly, not weekly:** this is a structural hygiene check, not time-sensitive data (unlike the price/EDHREC refresh above) — duplicates accumulate slowly and aren't urgent to catch same-week. If duplicates turn out to recur faster than monthly, that's itself worth noticing (a sign the underlying write pattern needs a closer look), not just a cue to run this more often.
+**Why this is fine at weekly, even though the underlying problem doesn't need it:** the check itself is nearly free most weeks (a folder listing plus a filename comparison, ending immediately at step 5 if nothing's wrong) — the cost only shows up on a week a duplicate actually exists, which is exactly the week you want it caught. If duplicates turn out to appear almost every week, that's itself worth noticing (a sign the underlying write pattern needs a closer look), not just routine output.
 
 **What this doesn't cover**: the doc/architecture-level review of the *curated files themselves* (`project-instructions.md`, `deckbuilding-framework.md`, etc.) — cross-reference bugs, token-budget shape, Knowledge-upload completeness, and so on — is out of scope for this task. That review needs to edit files in the GitHub repo directly, which the live Project agent cannot do (Project Knowledge from GitHub is read-only from chat, same reason `wiki/knowledge-gaps.md` exists at all). That kind of review stays a periodic Claude Code session task — see `maintenance-workflow.md`'s "Periodic doc/architecture audit" note.
 

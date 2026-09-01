@@ -30,7 +30,7 @@ Per `game-log-workflow.md`, deck win-rate stats live primarily in each deck's `w
 
 ## Known limitation: concurrent writes
 
-Every CSV/wiki write is read-modify-write with no locking — Drive doesn't even enforce unique filenames in a folder, so two sessions writing around the same time (a phone session and a desktop session, or a scheduled task overlapping a manual price/game log) can race and, worst case, produce duplicate-named files instead of one clean append. Not worth engineering a fix for a single-user setup — but avoid manually logging prices or games while a scheduled task is running, and if you ever notice two files with the same name in `wiki/`, treat it as this known failure mode: read both, keep the one that's the superset, trash the other. `scheduled-tasks.md`'s monthly wiki hygiene check exists specifically to catch this automatically.
+Every CSV/wiki write is read-modify-write with no locking — Drive doesn't even enforce unique filenames in a folder, so two sessions writing around the same time (a phone session and a desktop session, or a scheduled task overlapping a manual price/game log) can race and, worst case, produce duplicate-named files instead of one clean append. Not worth engineering a fix for a single-user setup — but avoid manually logging prices or games while a scheduled task is running, and if you ever notice two files with the same name in `wiki/`, treat it as this known failure mode: read both, keep the one that's the superset, trash the other. `scheduled-tasks.md`'s weekly wiki hygiene check exists specifically to catch this automatically.
 
 ## Periodic doc/architecture audit
 

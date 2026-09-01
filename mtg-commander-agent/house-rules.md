@@ -1,4 +1,4 @@
-# House Rules — [Your Playgroup Name]
+# House Rules —
 
 > Upload this file as Project knowledge, alongside the other curated docs. Unlike `commander-rules-reference.md` (the official format rules), this file is **you-authored and playgroup-specific** — the agent never edits it. Keep it accurate as your group's rules evolve — edit it here (or wherever you actually keep it) and re-upload/re-sync per `setup-guide.md`.
 
