@@ -95,7 +95,7 @@ Tie recommendations back to the target bracket:
 ## Synergy checklist (for evaluating a whole deck, not just one card)
 
 - Is there a clear A-to-B-to-win path, or is it a pile of good-but-disconnected cards?
-- Are there redundant effects for the deck's most important effect (e.g. multiple sac outlets in an aristocrats deck), or direct protection for it (redirect effects, hexproof/ward, indestructible) when redundancy isn't practical for a genuinely unique engine piece — so one removed or countered piece doesn't blank the plan?
+- Are there redundant effects for the deck's most important effect (e.g. multiple sac outlets in an aristocrats deck), or direct protection for it (redirect effects, hexproof/ward, indestructible) when redundancy isn't practical for a genuinely unique engine piece — so one removed or countered piece doesn't blank the plan? If that unique piece is the commander itself, hold this to the 6–8-distinct-effects standard in the "Size engine protection…" signal, not a token one or two.
 - Does the deck have a plan against removal-heavy or counterspell-heavy tables, or is it fully reliant on one resolving spell?
 - Is there a way to interact with what opponents are doing, or is this a fully solitaire deck (fine for casual, risky at higher brackets)?
 - If the commander's engine only functions when opponents supply an input (creatures to kill, attackers, spells, artifacts), what guarantees that input against an opponent who doesn't provide it — is there a "commander fuel" package (Strong-inclusion signals), and is it repeatable rather than one-shot?
