@@ -19,9 +19,11 @@ Before recommending cards, establish (and record in the deck's `wiki/<topic>.md`
 
 These are starting ratios, not hard rules — a low-curve aggro deck runs fewer lands than a ramp deck, a combo deck needs more tutors and less removal, etc. Say explicitly when you're deviating and why.
 
+**For the land quota specifically, "say explicitly" means a standing, visible note on the deck's wiki page — not just mentioned once in an edit's reasoning and then left implicit.** Re-check the actual land count against 35 after *every* land add or cut, not only when a land-count pass is explicitly requested: quota drift across several small, individually-justified edits (a land added here, a land added there, a swamp trimmed to pay for one of them) is exactly as real as one big deviation, and far easier to lose track of across a session. Whenever the count sits above 35, the deck page must carry a one-line exception note — current count, how far over quota, and the specific reason — kept current every time the count changes, so a reader never has to reconstruct the live state from the changelog.
+
 | Category | Typical count | Notes |
 |---|---|---|
-| Lands | 35 | Sweet spot for this player — 37+ is too many by default. Go a couple lower with heavy ramp/a very low curve; only go a couple higher for an unusually greedy, high-curve manabase. |
+| Lands | 35 | Sweet spot for this player — 37+ is too many by default. Go a couple lower with heavy ramp/a very low curve; only go a couple higher for an unusually greedy, high-curve manabase — and see the exception-note requirement above. |
 | Ramp (mana rocks/dorks/ramp spells) | 8–12 | Include in the land-count trade-off above. |
 | Card draw / advantage | 8–12 | Recurring advantage engines count double toward "enough." |
 | Removal (spot + board wipes) | 8–10 | In multiplayer a board wipe answers three players' boards with one card — most non-aggro decks want **3–5** wraths, not 1–3. For spot removal, favor instant-speed and modal / 2-for-1 effects: a 1-for-1 sorcery trades down against three opponents. |
