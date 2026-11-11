@@ -41,6 +41,13 @@ Specific cards to flag when validating decklists, beyond (or instead of) the off
 - **Spells & efficiency**: Mana Drain, Force of Will, Orcish Bowmasters, Hinata, Dawn-Crowned
 - **Burst & combat**: Blightsteel Colossus, Hatred, Brigid, Clachan's Heart
 
+## Price cap
+
+- **No card priced above $150 may be in the deck** (commander included). This is a deckbuilding exclusion with the same weight as the Custom ban list: a card over the cap is a cut, whether or not it's owned or proxied.
+- **Which price counts:** the cheapest non-foil printing's USD price on Scryfall, fetched live at the time of the build or review. Foil, promo, and special-treatment premiums don't count, and neither do cached or remembered prices.
+- **Price spikes:** if a card already in a deck rises above $150, flag it at the deck's next review or revision and replace it there. It is not retroactively illegal mid-game.
+- **Unverifiable price:** if the live lookup fails, say so and hold the card until its price is confirmed. Don't assume it's under the cap.
+
 ## Power-level agreement
 
 Governed by the Pod Philosophy and Global Pod Rules above rather than the official Bracket system (`commander-rules-reference.md`) directly — a deck should read as pillow-fort/interactive-friendly, not stax-lock or infinite-combo-focused, regardless of what bracket it would otherwise sit at.
